@@ -1,0 +1,1 @@
+app.value("REGISTERURL","http://localhost:3000/register");
