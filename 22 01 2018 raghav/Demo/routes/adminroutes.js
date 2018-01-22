@@ -1,0 +1,21 @@
+const express = require("express");
+var router = express.Router();
+
+const userOperation = require("../db/crud/admin/admincrud");
+router.post('/personaldetails',(request,response)=>{
+
+    userOperation.login(userObject,response);
+    console.log("Login ",userObject);
+    });
+    router.post('/register',(request,response)=>{
+    console.log("Register Call");
+        var userid = request.body.userid;
+    var password = request.body.password;
+    var name = request.body.username;
+    var address = request.body.address;
+    var userObject = new User(userid,password, name, address);
+    userOperation.register(userObject,response);
+    console.log("Register ",userObject);
+    
+    });
+    module.exports = router;
