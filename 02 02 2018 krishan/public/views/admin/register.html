@@ -1,0 +1,49 @@
+<div class="container">
+    <form action="/register" method="post">
+        <h1 translate="Create_Account">Create Account</h1>
+        <div class="form-group">
+            <label for="" translate="Name">Name</label>
+            <input type="text" name="name" class="form-control" ng-model="name">
+        </div>
+        <div class="form-group">
+            <label for="" translate="Userid">Userid</label>
+            <input type="email" name="userid" class="form-control" ng-model="userid">
+        </div>
+        <div class="form-group">
+            <label for="" translate="Password">Password</label>
+            <input type="password" name="password" class="form-control" ng-model="password">
+        </div>
+        <div class="form-group">
+                <label for=""  translate="ReenterPassword">Re-enter password</label>
+                <input type="password" name="repass" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="" translate="Phoneno">Phone no.</label>
+            <input type="text" name="phone_no" class="form-control" ng-model="phone_no">
+        </div>
+        <div class="form-group">
+            <label for="" translate="DOB">DOB</label>
+            <input type="date" name="dob" class="form-control" ng-model="dob">
+        </div>
+        <div class="form-group">
+            <label for="" translate="Photo">Photo</label>
+            <input type="text" name="photo" class="form-control" ng-model="photo">
+            <a href="#" translate="UploadPhoto">Upload Photo</a>
+        </div>
+        <div class="form-group">
+            <label for="" translate="Signature">Signature</label>
+            <input type="text" name="signature" class="form-control" ng-model="signature">
+            <a href="#" translate="UploadSignature">Upload Signature</a>
+        </div>
+        <div class="form-group">
+            <!-- <button type="Submit" name="btn btn-primary" ng-click="register()" translate="Submit"></button> -->
+            <!-- <button name="btn btn-primary" ng-click="register()" translate="Submit"></button>               -->
+            <button name="btn btn-primary" translate="Submit"></button>              
+            <!-- <button name="btn btn-primary" translate="Submit">Submit</button>               -->
+
+        </div>
+        <div class="form-group">
+            <button type="reset" name="btn btn-primary" ng-click="clear()" translate="Reset">Reset</button>
+        </div>
+    </form>
+</div>
