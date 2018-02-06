@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./views/admin/main.css">
+    <script src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="./js/admin/app.js"></script>
+    <script src="./js/admin/internalionalisation.js"></script>
+    <script src="./js/admin/config.js"></script>
+    <script src="./js/admin/adminFactory.js"></script>
+    <script src="./js/admin/registercontroller.js"></script>
+    <!--<script src="js/admin/financialdetailscontroller.js"></script>
+    <script src="js/admin/companydetailscontroller.js"></script>
+    <!--<script src="js/admin/adminRoutes.js"></script>-->
+</head>
+<body ng-app="adminReg" ng-controller="registercontroller">
+        <div class="container">
+                <form action="register" ng-submit="submit()" method="post" novalidate ng-submit="validate(form1)">
+                <h4 translate="Create_Account">Create Account</h4>
+                <div class="form-group">
+                    <label for="" translate="Name">Name</label>
+                    <input type="text"  class="form-control" name="name" ng-model="name" required>
+                    <span class="apperror"  ng-show="form1.name.$touched && form1.name.$pristine && form1.name.$error.required">Name can't be Empty</span>
+                </div>
+                <div class="form-group">
+                    <label for="" translate="Userid">Userid</label>
+                    <!-- <input type="email" name="email_id" class="form-control" ng-model="email_id">
+                     -->
+                     <input type="email" name="userid" class="form-control" ng-model="userid" required>
+                     <span class="apperror" ng-show="form1.userid.$touched &&  form1.userid.$pristine && form1.userid.$error.required">Userid can't be Empty</span>
+                </div>
+                <div class="form-group">
+                        <label for="" translate="Password">Password</label>
+                        <input type="password" name="password" class="form-control" ng-model="password" required>
+                        <span class="apperror" ng-show="form1.password.$touched &&  form1.password.$pristine && form1.password.$error.required">Password can't be Empty</span>
+                </div>
+                <div class="form-group">
+                    <label for=""  translate="ReenterPassword">Re-enter password</label>
+                    <input type="password" name="repass" class="form-control" ng-model="repass">
+                    <span class="apperror" ng-show="form1.repass.$touched &&  form1.repass.$pristine && form1.repass.$error.required">Re-enter password can't be Empty</span>
+            </div>
+                <div class="form-group">
+                    <label for="" translate="Phoneno">Phone no.</label>
+                    <input type="text" name="phoneno" class="form-control" ng-model="phoneno" required>
+                    <span class="apperror" ng-show="form1.phoneno.$touched &&  form1.phoneno.$pristine && form1.phoneno.$error.required">Phone no.can't be Empty</span>
+            </div>
+            <div class="form-group">
+                <label for="" translate="DOB">DOB</label>
+                <input type="date" name="dob" class="form-control" ng-model="dob" required>
+                <span class="apperror" ng-show="form1.dob.$touched &&  form1.dob.$pristine && form1.dob.$error.required">DOB can't be Empty</span>
+        </div>
+        <div class="form-group">
+            <label for="" translate="Photo">Photo</label>
+            <input type="text" name="photo" class="form-control" ng-model="photo">
+            <span class="apperror" ng-show="form1.photo.$touched &&  form1.photo.$pristine && form1.photo.$error.required">Photo can't be Empty</span>
+            <a href="#" translate="UploadPhoto">Upload Photo</a>
+        </div>
+        <div class="form-group">
+            <label for="" translate="Signature">Signature</label>
+            <input type="text" name="signature" class="form-control" ng-model="signature">
+            <span class="apperror" ng-show="form1.signature.$touched &&  form1.signature.$pristine && form1.signature.$error.required">Signature can't be Empty</span>
+            <a href="#" translate="UploadSignature">Upload Signature</a>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="reset" class="btn btn-default" ng-click="clear()" translate="Reset">Reset</button>
+                <button type="submit" class="btn btn-primary" ng-click="register()"  translate="Submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+            </div>
+   <!-- <a href="#/register">Register</a>
+    <a href="#/demo">demo</a>
+    <a href="#/financialdetails">FinancialDetails</a>
+    <a href="#/companydetails">CompanyDetails</a>
+    <ng-view></ng-view>-->
+</body>
+</html>
