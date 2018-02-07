@@ -5,9 +5,7 @@ app.controller("registercontroller",function($scope,adminFactory,REGISTERURL){
         var password = $scope.password;
         var phoneno = $scope.phoneno;
         var dob=$scope.dob;
-        /*var photo=$scope.photo;
-        var signature=$scope.signature;*/
-        console.log(phoneno+""+dob+""+signature);
+        console.log(phoneno+""+dob);
         const adminObj = {"name":name,"phoneno":phoneno,"emailid":emailid,"password":password,"dob":dob};
         console.log(adminObj);
         var promise = adminFactory.doAjaxCall(REGISTERURL,adminObj);

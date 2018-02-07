@@ -28,13 +28,4 @@ $scope.validate=(formName)=>{
     }      
 }
 
-/*$scope.clear=function(){
-    $scope.accountno="";
-    $scope.accounttype="";
-     $scope.holdername="";
-    $scope.bankname="";
-    $scope.branch="";
-    $scope.ifsc="";
-    $scope.bankcity="";
-}*/
 });

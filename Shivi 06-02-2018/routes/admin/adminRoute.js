@@ -12,16 +12,16 @@ router.post("/register",(request,response)=>{
     var reenterpassword=request.body.reenterpassword;
     var phoneno=request.body.phoneno;
     var dob=request.body.dob;
-    var photo=request.body.photo;
-    var signature=request.body.signature;
   //  console.log("Inside router.post"+phone_no+""+dob+""+signature);    
-    var adminObject=new admin(name,userid,password,reenterpassword,phoneno,dob,photo,signature);
+    var adminObject=new admin(name,userid,password,reenterpassword,phoneno,dob);
    // console.log("Inside router.post"+adminObject);
     const adminOperations=require('../../db/crud/admin/adminCrud');
     adminOperations.register(adminObject,response);
     });
 
     router.post("/companydetails",(request,response)=>{
+    console.log("Inside router.post method with request object :")
+    console.log(request.body);
     var companyname=request.body.companyname;
     var description=request.body.description;
     var tagline=request.body.tagline;
@@ -38,7 +38,7 @@ router.post("/register",(request,response)=>{
     var officeno=request.body.officeno;
     var emailid=request.body.emailid;
     var fax=request.body.fax;
-    console.log("Inside router.post"+companyname+""+description+""+emailid);
+    //console.log("Inside router.post"+companyname+""+description+""+phoneno);
     var companydetailsobject=new companydetails(companyname,description,tagline,logo,line1,line2,city,state,country,zipcode,longitude,latitude,phoneno,officeno,emailid,fax);
     console.log("Inside router.post");
     console.log(companydetailsobject);

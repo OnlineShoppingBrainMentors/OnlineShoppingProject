@@ -91,7 +91,8 @@ app.config(function ($translateProvider) {
         CardProvider:'Card Provider',
         Bank:'Bank',
         Branch:'Branch'
-    });  $translateProvider.preferredLanguage('en');
+    });  
+    $translateProvider.preferredLanguage('en');
 });
 app.controller("Ctrl", function ($scope, $translate) {
     $scope.changeLanguage = function (key) {

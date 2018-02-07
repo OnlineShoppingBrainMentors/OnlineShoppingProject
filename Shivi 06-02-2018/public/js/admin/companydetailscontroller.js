@@ -32,31 +32,14 @@ app.controller("companydetailscontroller",function($scope,adminFactory,COMPANYDE
 
 $scope.validate=(formName)=>{
 if(formName.$valid){
-    $scope.result = "Form is Valid..."
+    $scope.result = "Form is Valid...";
+   // next();
 } 
 else{
     $scope.result = "Invaid Form ";
 }      
 }
 
-/*$scope.clear=function(){
-    $scope.companyname="";
-    $scope.description="";
-     $scope.tagline="";
-    $scope.logo="";
-    $scope.line1="";
-    $scope.line2="";
-    $scope.city="";
-    $scope.state="";
-    $scope.country="";
-     $scope.zipcode="";
-    $scope.longitude="";
-    $scope.latitude="";
-    $scope.phoneno="";
-    $scope.oficeno="";
-    $scope.emailid="";
-    $scope.fax="";
-}*/
 
 $scope.contacts = [{number:""}]
 $scope.addContact = function() {

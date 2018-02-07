@@ -18,4 +18,5 @@ class CompanyDetails{
            this.fax=fax;
     }
 }
+
 module.exports = CompanyDetails;
