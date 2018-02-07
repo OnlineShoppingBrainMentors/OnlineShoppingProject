@@ -1,0 +1,130 @@
+{
+    "_id": "5a7a92128155ec0a8c09a3a7",
+    "categories": [
+        {
+            "name": "Electronics",
+            "subcategories": [
+                {
+                    "name": "Mobiles",
+                    "imageurl": "http://newslover.in/wp-content/uploads/2016/10/maxresdefault14.jpg",
+                    "brands": "Apple Samsung Xiaomi"
+                },
+                {
+                    "name": "Laptops",
+                    "imageurl": "https://cnet2.cbsistatic.com/img/ILtXBwI66RTFtbVLh0lIbb6uWGA=/1600x900/2017/02/28/e5212d3b-1ff9-4018-8645-6b2292e1a9ef/three-laptops-01.jpg",
+                    "brands": "Dell Lenovo HP Apple"
+                },
+                {
+                    "name": "Refrigerators",
+                    "imageurl": "http://www.ikea.com/PIAimages/0530525_PE646733_S5.JPG",
+                    "brands": "Samsung LG Haier Panasonic"
+                },
+                {
+                    "name": "Gaming Consoles",
+                    "imageurl": "https://s.aolcdn.com/hss/storage/midas/32bb1af1f8a7d5655148b1bc169b9892/205905776/switch-ed-2.jpg",
+                    "brands": "Sony Microsoft Nintendo"
+                },
+                {
+                    "name": "Washing Machines",
+                    "imageurl": "https://f1.media.brightcove.com/8/1078702682/1078702682_4471294932001_washing-machine-still.jpg?pubId=1078702682&videoId=1651750822",
+                    "brands": "LG Samsung Haier Videocon"
+                },
+                {
+                    "name": "Microwaves",
+                    "imageurl": "https://images-na.ssl-images-amazon.com/images/I/71O5H-MMb2L._SL1500_.jpg",
+                    "brands": "Samsung LG Philips"
+                }
+            ]
+        },
+        {
+            "name": "clothing",
+            "subcategories": [
+                {
+                    "name": "men",
+                    "imageurl": "http://www.cstylejeans.com/wp-content/uploads/2016/02/fashion-clothes-for-men-008.jpg",
+                    "brands": "Roadster USPolo Blackberry"
+                },
+                {
+                    "name": "women ",
+                    "imageurl": "https://img.wikinut.com/img/3b9mjcujfriqo7gg/jpeg/0/women-clothing.jpeg",
+                    "brands": "Bitterlime Next Harvard"
+                },
+                {
+                    "name": "children",
+                    "imageurl": "http://www.newkidscenter.com/images/10404307/c4c6e34fc8b60f574ebfc8c361d03723.jpg",
+                    "brands": "Kittens Ninos Kangaroos"
+                },
+                {
+                    "name": "latests",
+                    "imageurl": "https://physique57.com/wp-content/uploads/2014/02/physique_blog_inpost_apparel.jpg",
+                    "brands": "USPolo Next Kangaroos"
+                },
+                {
+                    "name": "sales",
+                    "imageurl": "http://www.trinity4jesus.org/wp-content/uploads/2016/05/sale-picture.jpg",
+                    "brands": "Harvard Ninos Roadster"
+                }
+            ]
+        },
+        {
+            "name": "footwear",
+            "subcategories": [
+                {
+                    "name": "men",
+                    "imageurl": "http://bata.in/blog/wp-content/uploads/2017/04/Collage-boat.jpg",
+                    "brands": "Nike Adidas Reebok"
+                },
+                {
+                    "name": "women",
+                    "imageurl": "http://www.connectedui.com/images/yoSchutz-us/11177117SO.jpg",
+                    "brands": "Aqualite Converse Newton"
+                },
+                {
+                    "name": "children",
+                    "imageurl": "http://uttarakhandbazaar.com/ShopImage/babashoes1.jpg",
+                    "brands": "Puma Lotto Fila"
+                },
+                {
+                    "name": "latest",
+                    "imageurl": "http://2.bp.blogspot.com/-OT-CMwuua5w/UG1jLxNaYKI/AAAAAAAAAJU/THykdQ5SRkE/s1600/footwear_report-2.jpg",
+                    "brands": "Woodland Puma Nike"
+                },
+                {
+                    "name": "sales",
+                    "imageurl": "https://sc01.alicdn.com/kf/HTB1bbeVOpXXXXXbaXXXq6xXFXXXv/used-cream-shoes-for-sale-in-california.jpg",
+                    "brands": "Fila Lotto Adidas"
+                }
+            ]
+        },
+        {
+            "name": "cars",
+            "subcategories": [
+                {
+                    "name": "suv",
+                    "imageurl": "http://s3.india.com/auto/wp-content/uploads/2016/12/2f07b132f9c43a35eebb25970a801bc5__1.jpg",
+                    "brands": "Hyundai Maruti Honda Audi"
+                },
+                {
+                    "name": "sedan",
+                    "imageurl": "https://i.ytimg.com/vi/T6sy6BV2ngA/maxresdefault.jpg",
+                    "brands": "Audi Mercedes BMW"
+                },
+                {
+                    "name": "small",
+                    "imageurl": "http://www.carblogindia.com/wp-content/uploads/2014/12/top-5-hatchbacks-in-india.jpg",
+                    "brands": "Tata Hyundai Volkswagen"
+                },
+                {
+                    "name": "luxury",
+                    "imageurl": "https://cdn-ds.com/media/2360/w_1920/Jumbo-Luxury-Wall-Wrap.jpg",
+                    "brands": "BMW Audi Mercedes"
+                },
+                {
+                    "name": "sports",
+                    "imageurl": "http://www.hdcarwallpapers.com/walls/super_sports_cars-HD.jpg",
+                    "brands": "Ferrari Lamborghini Audi"
+                }
+            ]
+        }
+    ]
+}
