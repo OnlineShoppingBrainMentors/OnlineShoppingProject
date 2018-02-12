@@ -1,0 +1,20 @@
+{
+  "name": "public",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.8",
+    "bootstrap": "boostrap#^4.0.0",
+    "angular-route": "^1.6.8",
+    "angular-translate": "^2.17.0"
+  }
+}

@@ -1,63 +1,7 @@
 
 const express = require("express");
 const router = express.Router();
-//const app=express();
 /*Image Upload --------------------*/
-
- 
-  //const storage=multer.diskStorage({
-  //   destination:'./public/uploads/',
-  //   filename:function(req,file,cb){
-  //     console.log(file);
-  //      cb(null,file.fieldname + "-" +Date.now()+path.extname(file.originalname));
-  //      cb(null,file.fieldname + "-" +Date.now());
-  //   }
-  //   });
-  // //Init Upload
-  //  const upload=multer({
-  //    storage: storage,
-  //    limits:{filesize:10000},
-  //    fileFilter: function(req, file, cb) {
-  //        checkFileType(file,cb);
-  //    }
-  //  }).array('carouselimage');
-
-  //  function checkFileType(file,cb){ 
-  //    // Allowed ext
-  //     var filetypes = /jpeg|jpg|png|gif/;
-  //    //  Check mime
-  //     var mimetype = filetypes.test(file.mimetype);
-  //     // Check ext
-  //     var extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-
-  //     if (mimetype && extname) {
-  //       return cb(null, true);
-  //     } else{ 
-  //      cb("Error: File upload only supports the following filetypes - " + filetypes);
-  //     cb("Error:Images Only!");
-  //   }
-  // }
-
-  // app.post('/imageupload',(req,res)=>{
-  //   upload(req,res,function(err) {
-  //     if(err) {
-  //       return res.end("Error uploading file.");
-  //   }
-  //   else{
-  //      /* if(req.file==undefined){
-  //  res.render('./public/views/admin/imageupload');
-  //   }*/
-  //       //else{
-  //          console.log(req.files);
-  //       //message:'File uploaded successfully' 
-  //   res.end("File is uploaded");
-  //     // }
-  //   }
-  // });
-  //  });
-
-
-
   const imageupload=require("../../models/admin/imageupload");
   const multer=require('multer');
   const path=require('path');
@@ -69,7 +13,7 @@ const router = express.Router();
        cb(null,file.fieldname + "-" +Date.now());
   }
     });
-//       //Init Upload
+/*Init Upload---------------------------------------------*/
    const upload=multer({
      storage: storage,
     limits:{filesize:10000},
@@ -93,49 +37,12 @@ const router = express.Router();
       cb("Error:Images Only!");
     }
   }
-
-
- 
  
  //***************************************************************************************************/
 router.post('/imageupload',(req,res)=>{
   console.log("Hello we are in app.post /imageupload");
   console.log("request data is :");
   console.log(req);
-//   const multer=require('multer');
-//   const path=require('path');
-//   const storage=multer.diskStorage({
-//     destination:'./public/uploads/',
-//     filename:function(req,file,cb){
-//       console.log(file);
-//        cb(null,file.fieldname + "-" +Date.now()+path.extname(file.originalname));
-//        cb(null,file.fieldname + "-" +Date.now());
-//   }
-//     });
-// //       //Init Upload
-//    const upload=multer({
-//      storage: storage,
-//     limits:{filesize:10000},
-//      fileFilter: function(req, file, cb) {
-//         checkFileType(file,cb);
-//      }
-//    }).array('carouselimage');
-
-//    function checkFileType(file,cb){ 
-//      // Allowed ext
-//       var filetypes = /jpeg|jpg|png|gif/;
-//        //Check mime
-//       var mimetype = filetypes.test(file.mimetype);
-//        //Check ext
-//       var extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-
-//       if (mimetype && extname) {
-//         return cb(null, true);
-//       } else{ 
-//        cb("Error: File upload only supports the following filetypes - " + filetypes);
-//       cb("Error:Images Only!");
-//     }
-//   }
   upload(req,res,function(err) {
     if(err) {
       return res.end("Error uploading file.");
@@ -151,23 +58,8 @@ router.post('/imageupload',(req,res)=>{
 //       }
         }
   });
-  /*let carouselimage=req.body.carouselimage;   
-      let imageuploadobject=new imageupload(carouselimage);
-      console.log("Inside router.post"+imageuploadobject);
-      const adminOperations=require('../../db/crud/admin/adminCrud');
-      adminOperations.imageupload(imageuploadobject,res);*/
+  
   });
-
-
- //***************************************************************************************************/
-
- /*----------------------*/
- 
-const admin = require("../../models/admin/adminRegister");
-const companydetails = require("../../models/admin/companydetails");
-const financialdetails=require("../../models/admin/financialdetails");
-const cardDetails=require("../../models/admin/cardDetails")
-const adminOperations = require("../../db/crud/admin/adminCrud");
 
  //***************************************************************************************************/
 
@@ -180,11 +72,19 @@ router.post("/register",(request,response)=>{
     let reenterpassword=request.body.reenterpassword;
     let phoneno=request.body.phoneno;
     let dob=request.body.dob;
-    console.log("Inside router.post"+phoneno+""+dob);    
-    let adminObject=new admin(name,userid,registrationuserid,oldpassword,password,reenterpassword,phoneno,dob);
-    console.log("Inside router.post"+adminObject);
+    const companydetailsmodel = require("../../models/admin/companyRegistration");
+    // console.log("Inside router.post"+phoneno+""+dob);       
+    // let adminObject=new admin(name,userid,registrationuserid,oldpassword,password,reenterpassword,phoneno,dob);
+    // let adminObject=new admin(registrationuserid,oldpassword);
+    let companydetailsObject=new companydetailsmodel();
+    let superusersettercondition={'superuser.email':registrationuserid,'superuser.password':password}
+    let superusersettersuccess={result:true,message:'Registered Successfully'};
+    let superusersettererror={result:undefined,message:'Some Database Server error'};
+    companydetailsObject.superusersetter(name,userid,password,phoneno,dob);
+    console.log("Inside router.post"+companydetailsObject);
     const adminOperations=require('../../db/crud/admin/adminCrud');
-    adminOperations.register(adminObject,response);
+   //adminOperations.register(companydetailsObject,response);
+    adminOperations.update(companydetailsObject,superusersettercondition,response,superusersettersuccess,superusersettererror);
     });
  //***************************************************************************************************/
 
