@@ -1,7 +1,9 @@
+const connection = require("../../connection");
 const Schema = connection.Schema;
 const companydetailsSchema = new Schema(
 {
-    name: {type:String,required :true},
+    // companyname: {type:String,required :true},
+    companyname: {type:String},
     description: {type:String},
     logo: {type:String},
     imagesurl:[{type:String}],
@@ -16,7 +18,8 @@ const companydetailsSchema = new Schema(
         longitude: {type:String},
     },
     contactdetails: {
-        mobile: [ {type:String,required:true} ],
+        // mobile: [ {type:String,required:true} ],
+        mobile: [ {type:String} ],
         office: [{type:String}],
         fax: [{type:String}],
         email: [{type:String}]
@@ -27,7 +30,8 @@ const companydetailsSchema = new Schema(
         phone: {type:String,required :true},
         email: {type:String,required :true, unique : true},
         password: {type:String,required :true},
-        dateofbirth: {type:String}
+        dateofbirth: {type:String},
+        registered:{type:Boolean,required:true ,default :false}
     },
     financialdetails: {
         accountnumber: {type:String},
@@ -49,5 +53,5 @@ const companydetailsSchema = new Schema(
         ifsccode: {type:String}
     }
 });
-var companydetailsModel = connection.model("companydetails", adminRegSchema);
+var companydetailsModel = connection.model("companydetails", companydetailsSchema);
 module.exports = companydetailsModel;
