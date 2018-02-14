@@ -1,0 +1,129 @@
+{
+    "_id": "5a796bb68155ec0a8c09a3a4",
+    "categories": [
+        {
+            "name": "Electronics",
+            "subcategories": [
+                {
+                    "name": "Mobiles",
+                    "sets": [
+                        "Samsung",
+                        "Lenovo",
+                        "Apple",
+                        "Sony",
+                        "Motorola"
+                    ]
+                },
+                {
+                    "name": "laptop",
+                    "sets": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "television",
+                    "sets": [
+                        "Sony",
+                        "lG",
+                        "Samsung",
+                        "Toshiba",
+                        "Onida"
+                    ]
+                },
+                {
+                    "name": "refrigerators",
+                    "sets": [
+                        "LG",
+                        "Samsung",
+                        "Haier",
+                        "Huawei",
+                        "abcd"
+                    ]
+                },
+                {
+                    "name": "computer accessories",
+                    "sets": [
+                        "mouses",
+                        "keyboards",
+                        "pen drives",
+                        "speakers"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "clothing",
+            "subcategories": [
+                {
+                    "name": "men",
+                    "sets": [
+                        "shirt",
+                        "pant",
+                        "tshirt"
+                    ]
+                },
+                {
+                    "name": "women",
+                    "sets": [
+                        "women shirt",
+                        "women trouser",
+                        "women tshirts"
+                    ]
+                },
+                {
+                    "name": "baby",
+                    "sets": [
+                        "upper",
+                        "lower",
+                        "shoes"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "footwear",
+            "subcategories": [
+                {
+                    "name": "shoes",
+                    "sets": [
+                        "running",
+                        "sports",
+                        "canvas",
+                        "partywear"
+                    ]
+                },
+                {
+                    "name": "slippers",
+                    "sets": [
+                        "running slippers",
+                        "sports slipper",
+                        "canvas slipper",
+                        "bathroom slippers"
+                    ]
+                },
+                {
+                    "name": "sandals",
+                    "sets": [
+                        "running sandals",
+                        "sports sandals",
+                        "canvas sandals",
+                        "partywear sandal"
+                    ]
+                },
+                {
+                    "name": "steletoes",
+                    "sets": [
+                        "running steletoes",
+                        "sports steletoes",
+                        "canvas steletoes",
+                        "partywear steletoes"
+                    ]
+                }
+            ]
+        }
+    ]
+}
