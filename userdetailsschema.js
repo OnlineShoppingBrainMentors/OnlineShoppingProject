@@ -3,7 +3,7 @@ const Schema=connection.Schema;
 
 const userdetailsschema = new Schema ({
 
-    adminid: {type:String,required : true} ,
+    userid: {type:String,required : true} ,
     name: {type:String,required : true} ,
     dateofbirth:  {type:Date,required : true},
     dateofjoining: {type:Date,required : true},
@@ -25,10 +25,5 @@ const userdetailsschema = new Schema ({
         annually:{type:String}  ,
         totalsales:{type:String,required : true}  
     }
-
-
-
-
-
 
 })
