@@ -1,9 +1,9 @@
 const connection = require("../../connection");
 const Schema=connection.Schema;
 
-const userdetailsschema = new Schema ({
+const admindetailsschema = new Schema ({
 
-    clientid: {type:String,required : true} ,
+    adminid: {type:String,required : true} ,
     name: {type:String,required : true} ,
     dateofbirth:  {type:Date,required : true},
     dateofjoining: {type:Date,required : true},
