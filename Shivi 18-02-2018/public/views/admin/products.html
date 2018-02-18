@@ -1,0 +1,78 @@
+<div class="container">
+    <form  name="form1"  method="post" novalidate ng-submit="validate(form1)">   
+      <fieldset>
+        <h4 translate="Products"></h4>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="textinput" translate="Productid">Productid</label>
+            <input type="text" placeholder="Productid" class="form-control"  name="productid" ng-model="productid" pattern="[A-Za-z0-9]{1,50}([A-Za-z0-9] ?)+" title="At least one lowercase,one uppercase letter,one number,maximum 50 characters are required,whitespace is optional" required>
+            <span class="apperror" ng-show="form1.productid.$touched &&  form1.productid.$pristine && form1.productid.$error.required">Product id can't be Empty</span>
+            <span class="apperror" ng-show="form1.productid.$touched && form1.productid.$dirty && form1.productid.$error.pattern ">At least one lowercase,one uppercase letter,one number,maximum 50 characters are required,whitespace is optional</span>
+          </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="textinput" translate="Productname">Productname</label>
+          <textarea rows="4" cols="50" placeholder="Productname" class="form-control" name="productname" ng-model="productname" pattern="[A-Za-z]{1,50}([A-Za-z] ?)+" title="At least one lowercase,one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional" required></textarea>
+            <span class="apperror"  ng-show="form1.productname.$touched && form1.productname.$pristine && form1.productname.$error.required">Product name name can't be Empty</span>
+            <span class="apperror" ng-show="form1.productname.$touched && form1.productname.$dirty && form1.productname.$error.pattern ">At least one lowercase,one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional</span>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="ShortDescription">Short Description</label>
+            <textarea rows="4" cols="50" placeholder="Short Description" class="form-control" name="shortdescription" ng-model="shortdescription" pattern="[A-Za-z0-9]{0,200}([a-zA-Z0-9_\,\.\s] ?)+" title="At least one uppercase,one lowercase,one digit,maximum 200 characters are allowed,Whitespaces,Newline,Special characters such as , . _  are optional" required></textarea>
+              <span class="apperror"  ng-show="form1.shortdescription.$touched && form1.shortdescription.$pristine && form1.shortdescription.$error.required">Short Description can't be Empty</span>
+              <span class="apperror" ng-show="form1.shortdescription.$touched && form1.shortdescription.$dirty && form1.shortdescription.$error.pattern ">At least one uppercase,one lowercase,one digit,maximum 200 characters are allowed,Whitespaces,Newline,Special characters , . _  are optional</span>
+          </div>
+
+
+
+
+        <div class="form-group">
+          <label for="textinput" translate="Stock">Stock</label>
+            <input type="text" placeholder="Stock" class="form-control" name="stock" ng-model="stock" pattern="\d+((,\d+)+)" title="only numbers are allowed,maximum 100 characters are allowed,No Special character except , is allowed , is optional" required>
+            <span class="apperror"  ng-show="form1.stock.$touched && form1.stock.$pristine && form1.stock.$error.required">  can't be Empty</span>
+              <span class="apperror" ng-show="form1.stock.$touched && form1.stock.$dirty && form1.stock.$error.pattern ">only numbers are allowed,No Special ecxept , is allowed and , is optional to use</span>
+        </div>
+
+
+          <div class="form-group">
+          <label  for="textinput" translate="Status">Status</label>
+            <input type="text"  class="form-control" name="status" ng-model="status" pattern="^(?:Y|N)$" title="Only 'Y' or 'N' is allowed" placeholder="Status" required>
+            <span class="apperror"  ng-show="form1.status.$touched && form1.status.$pristine && form1.status.$error.required">Address Line1 no can't be Empty</span>
+            <span class="apperror" ng-show="form1.status.$touched && form1.status.$dirty && form1.status.$error.pattern ">Only 'Y' or 'N' is allowed</span>
+        </div>
+            
+        <div class="form-group">
+            <label for="textinput" translate="PurchasePrice">Purchase Price</label>
+              <input type="text" placeholder="Purchase Price" class="form-control" name="purchaseprice" ng-model="purchaseprice" pattern="\d+((,\d+)+)?(.\d+)?(.\d+)?(,\d+)?" title="only numbers are allowed,No Special character except , and . is allowed , and . are optional" required>
+              <span class="apperror"  ng-show="form1.purchaseprice.$touched && form1.purchaseprice.$pristine && form1.purchaseprice.$error.required">Purchase Price can't be Empty</span>
+                <span class="apperror" ng-show="form1.stock.$touched && form1.purchaseprice.$dirty && form1.purchaseprice.$error.pattern ">only numbers are allowed,No Special character except , and . is allowed , and . are optional</span>
+          </div>
+          
+                 
+        <div class="form-group">
+            <label for="textinput" translate="CreationDate">Creation Date</label>
+              <input type="text" placeholder="Creation Date" class="form-control" name="creationdate" ng-model="creationdate" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" title="only numbers are allowed,No Special character is allowed" required>
+              <span class="apperror"  ng-show="form1.creationdate.$touched && form1.creationdate.$pristine && form1.creationdate.$error.required">Creation Date can't be Empty</span>
+                <span class="apperror" ng-show="form1.creationdate.$touched && form1.creationdate.$dirty && form1.creationdate.$error.pattern ">only numbers are allowed,No Special character is allowed</span>
+          </div>
+        
+          <div class="form-group">
+            <label for="textinput" translate="Images">Images</label>
+              <input type="text" placeholder="Images" class="form-control" name="images" ng-model="images">
+              <a href="" translate="UploadImage">Upload Image</a>
+          </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="pull-right">
+              <button type="reset" class="btn btn-default" translate="Reset"></button>
+               <button type="submit" class="btn btn-primary" translate="Next"></button> 
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>

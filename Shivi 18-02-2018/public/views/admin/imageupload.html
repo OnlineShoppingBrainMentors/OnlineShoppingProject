@@ -1,0 +1,15 @@
+<div id="container">
+    <form method="post" action="imageupload" name="form1" enctype="multipart/form-data" ng-submit="validate(form1)" >
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="Carousel image ">Carousel image</label>
+            <input type="file" class="form-control" name="carouselimage" ng-model="carouselimage" multiple /><br><br>  
+            <div class="form-group"> 
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="pull-right">
+                  <button type="submit" class="btn btn-primary" translate="Next">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </form>
+  </div>

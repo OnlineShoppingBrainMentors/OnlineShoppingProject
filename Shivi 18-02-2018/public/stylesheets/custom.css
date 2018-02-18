@@ -1,0 +1,130 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin-top: 0px;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+   .row{
+       display: flex;
+   } 
+   
+/**********************************************************Nav-Bar***********************************************************/
+.navbar-default{
+    background: #232F3E;
+}
+.navbar-default .navbar-nav{
+    padding-left:10%;
+
+}
+.navbar-default ul li{
+    display: inline-block;
+}
+.navbar-default .navbar-nav li a{
+    padding-left: 20px;
+}
+.navbar-default .navbar-nav > .active > a{
+    background: #23949D;
+}
+.navbar-default .navbar-nav > .active > a:hover ,.navbar-default .navbar-nav > .active > a:focus{
+    color: #fff;
+    background: #2F7EB7;
+}
+.navbar-default .navbar-nav > .active > a ,.navbar-default  .navbar-nav li a{
+    color:#fff;
+}
+.navbar-default .navbar-nav li a:hover ,.navbar-default .navbar-nav li a:focus{
+    color: #fff;
+    background: #2F7EB7;
+}
+
+@media(max-width:1200px){
+    .navbar-default .navbar-nav li a{
+        font-size:12px;
+        padding-left: 18%;
+    }
+    .navbar-default .navbar-nav{
+        padding-left:7%;
+    }
+}
+@media(max-width:992px){
+    .navbar-default .navbar-nav li a{
+        font-size:10px;
+        padding-left: 7%;
+   
+    }
+    .navbar-default .navbar-nav{
+        padding-left:5%;
+    }
+}
+@media(max-width:768px){
+    .navbar-default .navbar-nav {
+       display: none;
+    }
+}
+/***********************************************Table***************************************************************************/
+.btn{
+    margin-left: 150px;
+    margin-top: -60px;
+    padding:4px 2px;
+}
+@media(max-width:1200){
+    padding: 4px 2px;
+}
+@media(max-width:992){
+    padding: 4px 2px;
+}
+
+
+thead {
+    background-color: #9E97FF;
+    color: white;
+}
+ .table{
+    background-color: #C2E1E1;
+} 
+
+.table td:hover{
+    background-color: #4ABCB6;
+}
+.table.view_product{ 
+    margin-left: 30px;
+     margin-top: -18px;  
+}
+.list-group-horizontal{
+    display: flex;
+}
+.list-group .list-group-horizontal{
+    margin-left:0px;
+}
+.list-group-horizontal .list-group-item {
+    display: block;
+}
+.list-group-horizontal .list-group-item {
+    padding: 10px;
+    margin-left:20px;
+	margin-right: 0;
+}
+.list-group-horizontal .list-group-item {
+	border-radius: 4px;
+}
+.control-label {
+    padding-left: 0px;
+    margin-left: 15px;
+}
+.form-group{
+    margin-top: 30px;
+}
+/* form-control {
+    margin-top: -30px;
+    margin-left: 136px;
+}
+.form-control {
+    margin-top: -30px;
+    margin-left: 136px;
+} */

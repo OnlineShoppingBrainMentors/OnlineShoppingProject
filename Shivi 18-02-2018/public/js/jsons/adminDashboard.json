@@ -1,0 +1,52 @@
+{
+    "_id": "5a884fa60df6032a206f5612",
+    "categories": [
+        {
+            "name": "category1",
+            "description": "desc1",
+            "subcategories": [
+                {
+                    "name1": "subcategoriy1",
+                    "name2": "subcategory2",
+                    "name3": "subcategory3",
+                    "name4": "subcategory4"
+                }
+            ]
+        },
+        {
+            "name": "category2",
+            "description": "desc2",
+            "subcategories": [
+                {
+                    "name1": "subcategory1",
+                    "name2": "subcategory2",
+                    "name3": "subcategory3",
+                    "name4": "subcategory4"
+                }
+            ]
+        },
+        {
+            "name": "category3",
+            "description": "desc3",
+            "subcategories": [
+                {
+                    "name1": "subcategory1",
+                    "name2": "subcategory2",
+                    "name3": "subcategory3",
+                    "name4": "subcategory4"
+                }
+            ]
+        },
+        {
+            "Specification": [
+                {
+                    "key1": "value1",
+                    "key2": "value2",
+                    "key3": "value3",
+                    "key4": "value4",
+                    "key5": "value5"
+                }
+            ]
+        }
+    ]
+}
