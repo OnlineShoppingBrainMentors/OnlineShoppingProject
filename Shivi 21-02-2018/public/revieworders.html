@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Review Orders</title>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/shivistylesheets/custom.css">
+    <script src="./js/shivijs/app.js"></script>
+    <script src="./js/shivijs/config.js"></script>
+    <script src="./js/shivijs/revieworderfactory.js"></script>
+    <script src="./js/shivijs/reviewordercontroller.js"></script>
+</head>
+
+<body ng-app="revieworder" ng-controller="adminDashboardController">
+    <div id="wrapper">
+        <div class="container">
+            <h2>Review Your Order</h2>
+
+            <div class="row">
+                <!----------------------Section1---------------------------------->
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="section-1 section-spacing section-shadow">
+                                <div class="address" ng-repeat="order in orderdata.orders">
+                                    <div class="address_heading">
+                                        <h4>Shipping Address</h4>
+                                        <span class="change_adddress">
+                                            <a href="#">EDIT</a>
+                                        </span>
+                                    </div>
+                                    <ul class="display_address">
+                                        <li class="full_name" ng-bind="order.clientdetails.name"></li>
+                                        <li class="address_line1" ng-bind="order.deliveryaddressline1"></li>
+                                        <li class="address_line2" ng-bind="order.deliveryaddressline2"></li>
+                                        <li class="city" ng-bind="order.city"></li>
+                                        <li class="country" ng-bind="order.country"></li>
+                                        <li class="contact_no">Contact no:
+                                            <span ng-bind="order.clientdetails.phone"></span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12" ng-repeat="order in orderdata.orders">
+
+                            <div class="section-3 section-spacing section-shadow">
+                                <div class="product" ng-repeat="product in order.products">
+                                    <h4 class="Product_name" ng-bind="product.name"></h4>
+                                    <div class="row">
+                                        <div class="col-md-2 product_img">
+                                            <img ng-src="{{product.imageurl}}" alt="image">
+                                        </div>
+                                        <div class="col-md-10 product_desc">
+                                            <ul class="display_address">
+                                                <li class="desc">
+                                                    <span class="desc">Description:</span>
+                                                    <span ng-bind="product.shortdescription"></span>
+
+                                                </li>
+                                                <li class="price" ng-bind="product.sellingprice"></li>
+                                                <li class="tax">
+                                                    <span class="desc">Tax:</span>
+                                                    <span ng-bind=""></span>
+                                                </li>
+                                                <li class="discount">
+                                                    <span class="desc">Discount:</span>
+                                                    <span ng-bind="product.discount"></span>
+                                                </li>
+                                                <li class="quantity">
+                                                    <span class="desc">quantity:</span>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                        <option value="">5</option>
+                                                    </select>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- <div class="col-md-12">
+
+                            <div class="section-3 section-spacing section-shadow">
+                                <div class="product">
+                                    <h4 class="Product_name">DAD ORIGINALS Earphone</h4>
+                                    <div class="row">
+                                        <div class="col-md-2 product_img">
+                                            <img src="https://images-eu.ssl-images-amazon.com/images/I/31wprLZ7uXL._SS100_.jpg" alt="image">
+                                        </div>
+                                        <div class="col-md-10 product_desc">
+                                            <ul class="display_address">
+                                                <li class="desc">
+                                                    <span class="desc">Description:</span>DAD ORIGINALS Earphone with mic Compatible For All
+                                                    LG Mobiles Compatible
+
+                                                </li>
+                                                <li class="price">239.00</li>
+                                                <li class="tax">
+                                                    <span class="desc">Tax:</span>:</li>
+                                                <li class="discount">
+                                                    <span class="desc">Discount:</span>
+                                                </li>
+                                                <li class="quantity">
+                                                    <span class="desc">quantity:</span>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                        <option value="">5</option>
+                                                    </select>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> -->
+
+
+                        <div class="col-md-12" ng-repeat="payment in orderdata.orders">
+                            <div class="section-2 section-spacing section-shadow">
+                                <div class="payment_mode_1">
+                                    <h4 class="Product_name">Mode Of Payment</h4>
+                                    <div class="row">
+                                        <div class="col-md-4" ng-repeat="proceedtopayment in payment.paymentmode">
+                                            <div class="payment">
+
+                                                <input type="radio" class="select" name="radio1">
+                                                <div class="payment_mode">
+                                                    <a href="#">
+                                                        <img ng-src="{{proceedtopayment.imageurl}}" alt="" class="img-responsive">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-4">
+                                            <div class="payment">
+
+                                                <input type="radio" class="select" name="radio1">
+                                                <div class="payment_mode">
+                                                    <a href="#">
+                                                        <img src=" https://4.bp.blogspot.com/-gGK0Mb612Po/WFe39guOlFI/AAAAAAAAEF0/JpElc14YShoKQMJa-XMFFJmblP6a0Y_NQCPcB/s1600/How-to-create-a-new-paytm-latest-new-app.jpg"
+                                                            alt="image" class="img-responsive">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <!-- <div class="col-md-4">
+                                            <div class="payment">
+
+                                                <input type="radio" class="select" name="radio1">
+                                                <div class="payment_mode">
+                                                    <a href="#">
+                                                        <img src=" https://4.bp.blogspot.com/-gGK0Mb612Po/WFe39guOlFI/AAAAAAAAEF0/JpElc14YShoKQMJa-XMFFJmblP6a0Y_NQCPcB/s1600/How-to-create-a-new-paytm-latest-new-app.jpg"
+                                                            alt="image" class="img-responsive">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="cash_on_delivery">
+                                    <h4>Cash on Delivery</h4>
+                                    <div class="payment1">
+                                        <input type="radio" class="select" name="radio1">
+                                        <div class="cash_payment" ng-repeat="proceedtopayment in payment.paymentmode">
+                                            <span ng-bind="proceedtopayment.cashondelivery">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-primary btn btn-block proceedtopay">Proceed to Payment</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!------------------------------------------Subtotal------------------------------------------------------>
+                <div class="col-md-4" ng-repeat="ordersummary in orderdata.orders">
+
+                    <div class="section-1 section-spacing section-shadow">
+                        <div class="order">
+
+                            <h4>Order Summary</h4>
+
+                            <ul class="order_summary clearfix">
+                                <li>
+                                    <span>Items:</span>
+                                    <span ng-bind="ordersummary.subtotal"></span>
+                                </li>
+                                <li>
+                                    <span>Delivery charges:</span>
+                                    <span ng-bind="ordersummary.deliverycharges"></span>
+                                </li>
+                                <li>
+                                    <span>Order Total:</span>
+                                    <span ng-bind="ordersummary.subtotal"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-------------------------------------------------------------------------------------------------------->
+
+            </div>
+        </div>
+
+</body>
+
+</html>

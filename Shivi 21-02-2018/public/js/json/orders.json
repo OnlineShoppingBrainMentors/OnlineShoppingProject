@@ -1,0 +1,40 @@
+{
+    "orders": [
+        {
+            "orderid": "",
+            "date": "",
+            "products": [
+                {
+                    "productid": "id1",
+                    "name": "",
+                    "image": "",
+                    "shortdescription": "",
+                    "quantity": "",
+                    "sellingprice": "",
+                    "mrp": "",
+                    "tax": ""
+                }
+            ],
+            "deliverycharges": "",
+            "deliverydate": "",
+            "promotion": "",
+            "amount": "",
+            "deliveryaddress": "",
+            "status": "",
+            "clientdetails": {
+                "clientid": "",
+                "name": "",
+                "phone": "",
+                "alternatephone": ""
+            },
+            "location": [
+                {
+                    "date": "1999-12-31T18:30:00.000Z",
+                    "desc": ""
+                }
+            ],
+            "adminemail": "",
+            "confirmationdate": "1999-12-31T18:30:00.000Z"
+        }
+    ]
+}
