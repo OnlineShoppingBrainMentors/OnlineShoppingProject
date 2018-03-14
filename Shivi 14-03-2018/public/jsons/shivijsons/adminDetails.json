@@ -1,0 +1,38 @@
+{
+    "adminDetails": [
+        {
+            "name": "Shivi",
+            "email": "sdfghj@fvgb",
+            "phone": "456789",
+            "DOB": "23/06/1234",
+            "alternatephone": "",
+            "password": "dfgh3456",
+            "address": {
+                "line1": "",
+                "line2": "",
+                "state": "",
+                "city": "",
+                "country": "",
+                "zipcode": ""
+            },
+            "dateofbirth": "1999-12-31T18:30:00.000Z",
+            "status": "",
+            "orders": [
+                "orderid1",
+                "orderid2"
+            ],
+            "products": [
+                "productid1",
+                "productid2"
+            ],
+            "bankingdetails": {
+                "accountnumber": "",
+                "accountholdername": "",
+                "accounttype": "",
+                "bankname": "",
+                "bankbranch": "",
+                "ifsccode": ""
+            }
+        }
+    ]
+}

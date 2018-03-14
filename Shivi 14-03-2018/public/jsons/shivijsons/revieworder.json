@@ -1,0 +1,67 @@
+{
+    "orders": [
+        {
+            "orderid": "",
+            "products": [
+                {
+                    "productid": "id1",
+                    "name": " DAD ORIGINALS Earphone",
+                    "imageurl": "https://images-eu.ssl-images-amazon.com/images/I/31wprLZ7uXL._SS100_.jpg",
+                    "shortdescription": "DAD ORIGINALS Earphone with mic Compatible For All LG Mobiles",
+                    "quantity": "1",
+                    "sellingprice": "₹239.00",
+                    "tax": "",
+                    "discount": "₹100.00"
+                },
+                {
+                    "productid": "id2",
+                    "name": "Mi Band",
+                    "imageurl": "https://images-eu.ssl-images-amazon.com/images/I/41Q0tA8wORL._SS100_.jpg",
+                    "shortdescription": "Mi Band - HRX Edition (Black)",
+                    "quantity": "1",
+                    "sellingprice": "₹250.00",
+                    "discount": "₹100.00",
+                    "tax": ""
+                }
+            ],
+            "paymentmode": [
+                {
+                    "imageurl": "https://4.bp.blogspot.com/-gGK0Mb612Po/WFe39guOlFI/AAAAAAAAEF0/JpElc14YShoKQMJa-XMFFJmblP6a0Y_NQCPcB/s1600/How-to-create-a-new-paytm-latest-new-app.jpg"
+                },
+                {
+                    "imageurl": "https://4.bp.blogspot.com/-gGK0Mb612Po/WFe39guOlFI/AAAAAAAAEF0/JpElc14YShoKQMJa-XMFFJmblP6a0Y_NQCPcB/s1600/How-to-create-a-new-paytm-latest-new-app.jpg"
+                },
+                {
+                    "imageurl": "https://4.bp.blogspot.com/-gGK0Mb612Po/WFe39guOlFI/AAAAAAAAEF0/JpElc14YShoKQMJa-XMFFJmblP6a0Y_NQCPcB/s1600/How-to-create-a-new-paytm-latest-new-app.jpg"
+                },
+                {
+                    "cashondelivery": "Cash on Delivery (COD). We also accept Credit/ Debit cards on delivery, subject to availability of the payment device. Please check with the delivery agent."
+                }
+            ],
+            "deliverycharges": "₹65",
+            "deliverydate": "2018-12-31T18:30:00.000Z",
+            "promotion": "",
+            "amount": "₹250",
+            "deliveryaddressline1": "Sector-ABCD",
+            "deliveryaddressline2": "ABCD",
+            "city": "XYZ,UTTAR PRADESH",
+            "country": "India",
+            "status": "",
+            "subtotal": "₹600",
+            "clientdetails": {
+                "clientid": "",
+                "name": "ABCD",
+                "phone": "123456",
+                "alternatephone": ""
+            },
+            "location": [
+                {
+                    "date": "1999-12-31T18:30:00.000Z",
+                    "desc": ""
+                }
+            ],
+            "adminemail": "",
+            "confirmationdate": "1999-12-31T18:30:00.000Z"
+        }
+    ]
+}

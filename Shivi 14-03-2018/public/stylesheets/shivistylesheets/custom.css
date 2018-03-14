@@ -1,0 +1,162 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f1f3f6;
+    color: #333;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+}
+@media(max-width:1200px){
+    body{
+        font-size: 12px;
+    }
+}
+@media(max-width:992px){
+body{
+    font-size: 12px;
+}
+}
+@media(max-width:768px){
+    body{
+        font-size: 11px;
+    }
+    
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+@media(max-width:768px){
+    h2{
+        font-size: 18px;  
+    }
+    h4{
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+ul{
+margin: 0px;
+padding: 0px;
+list-style: none;
+}
+h2{
+    margin-top: 15px;
+   
+}
+h4{
+    color: #EB8E11;
+    font-weight: 600;
+}
+
+/************************************************************sections**************************************************/
+.section-shadow{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+    border: 1px #ddd solid;
+}
+.section-spacing{
+    margin-top: 20px;
+}
+/**********************************************Address******************************************************/
+.address{
+    margin-left: 20px;
+    padding: 10px 10px;
+}
+.address ul li{
+    padding-top: 2px;
+}
+.change_adddress{
+    line-height: 2.5;
+}
+.address_heading{
+    column-count:2;
+}
+/***********************************************Ordered Products**************************************************/
+.product{
+    margin-left: 20px;
+    padding: 10px 10px;
+}
+.product ul li:first-child{
+    width: 50%;
+}
+ .product_desc{
+    padding-left: 30px;
+} 
+.product_desc ul li{
+    padding-top: 5px;
+}
+.product_desc ul li .desc{
+    font-weight: 600;
+}
+.product_desc ul li:nth-child(2){
+    color: #EB8E11;;
+}
+.quantity select{
+    display: inline-block;
+    width: 30%;
+}
+/**********************************Payment modes*********************************************************************/
+.payment_mode_1{
+    margin-left: 20px;
+    padding: 20px 10px;
+}
+.payment{
+    /* margin-left: 20px; */
+    padding: 20px 10px;
+}
+ .payment .payment_mode{
+    /* margin-top: -28px;
+     padding-left: 100px;  */
+     vertical-align: middle;
+     display: inline-block;
+ }
+ .payment1{
+    padding: 20px 10px;
+} 
+.cash_on_delivery{
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px rgb(167, 158, 158) solid;
+    margin-bottom: 20px;
+}
+ .cash_on_delivery .cash_payment{
+    padding-left: 100px; 
+    margin-top: -26px;
+} 
+.proceedtopay{
+    margin-bottom: 20px;
+}
+/************************************************************Order Summary******************************************************************/
+.order{
+    margin-left: 20px;
+    padding: 25px 20px;
+}
+.order ul , .order h4{
+    padding-left: 20px;
+}
+.order ul li:last-child span{
+color: #EB8E11;
+border-top: 1px rgb(167, 158, 158) solid;
+font-weight: 600;
+}
+.order ul li{
+    padding: 5px;
+}
+.order .order_summary{
+    padding-top: 10px;
+}
+.order .order_summary li span{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding: 5px 0px;
+}
