@@ -1,0 +1,166 @@
+<div class="container">
+  <form name="form1" method="post" ng-submit="validate(form1)">
+    <fieldset>
+      <h4 translate="CompanyDetails"></h4>
+
+      <!-------------------------------------------- Name of Company---------------------------------------------------------------------------->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="NameOfCompany"></label>
+        <input type="text" placeholder="Name Of Company" class="form-control" name="companyname" ng-model="companyname" pattern="[A-Za-z]{1,50}([A-Za-z] ?)+"
+          title="At least one lowercase,one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional"
+          required>
+        <span class="apperror" ng-show="form1.companyname.$touched &&  form1.companyname.$pristine && form1.companyname.$error.required">Name can't be Empty</span>
+        <span class="apperror" ng-show="form1.companyname.$touched && form1.companyname.$dirty && form1.companyname.$error.pattern ">At least one lowercase,one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is
+          optional
+        </span>
+      </div>
+
+      <!-------------------------------------------- Description of Company---------------------------------------------------------------------------->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="Description"></label>
+        <textarea rows="4" cols="50" placeholder="Description" class="form-control" name="description" ng-model="description" pattern="[A-Za-z0-9]{0,200}([a-zA-Z0-9_\,\.\s] ?)+"
+          title="At least one uppercase,one lowercase,one digit,maximum 200 characters are allowed,Whitespaces,Newline,Special characters , . _  are optional"
+          required></textarea>
+        <span class="apperror" ng-show="form1.description.$touched && form1.description.$pristine && form1.description.$error.required">Description can't be Empty</span>
+        <span class="apperror" ng-show="form1.description.$touched && form1.description.$dirty && form1.description.$error.pattern ">At least one uppercase,one lowercase,one digit,maximum 200 characters are allowed,Whitespaces,Newline,Special characters
+          , . _ are optional</span>
+      </div>
+
+      <!-------------------------------------------- Tagline---------------------------------------------------------------------------->
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="Tagline"></label>
+        <textarea rows="4" cols="50" placeholder="Tagline" class="form-control" name="tagline" ng-model="tagline" pattern="[A-Za-z0-9]{0,200}([a-zA-Z0-9_\,\.\s] ?)+"
+          title="At least one uppercase,one lowercase,one digit,maximum 200 characters are allowed,Whitespaces,Newline,Special characters , . _  are optional"
+          required></textarea>
+        <span class="apperror" ng-show="form1.tagline.$touched && form1.tagline.$pristine && form1.tagline.$error.required">Tagline can't be Empty</span>
+        <span class="apperror" ng-show="form1.tagline.$touched && form1.tagline.$dirty && form1.tagline.$error.pattern ">At least one uppercase,one lowercase,one digit,maximum 200 characters are allowed,Whitespaces,Newline,Special characters
+          , . _ are optional</span>
+      </div>
+      <!-------------------------------------------- Address of Company---------------------------------------------------------------------------->
+      <div class="branch">
+        <h5 translate="AddressOfCompany"></h5>
+        <h6 translate="BranchName"></h6>
+        <!-- Text input -->
+        <div class="form-group">
+          <label for="textinput" translate="AddressLine1"></label>
+          <input type="text" class="form-control" name="line1" ng-model="line1" pattern="[A-Za-z0-9]{0,50}([a-zA-Z0-9_\,\.\s\+-] ?)+"
+            title="At least one uppercase,one lowercase,one digit,maximum 50 characters are allowed,Whitespaces,Newline,Special characters , . _ + - are optional"
+            placeholder="Street Address" required>
+          <span class="apperror" ng-show="form1.line1.$touched && form1.line1.$pristine && form1.line1.$error.required">Address Line1 no can't be Empty</span>
+          <span class="apperror" ng-show="form1.line1.$touched && form1.line1.$dirty && form1.line1.$error.pattern ">At least one uppercase,one lowercase,one digit,maximum 50 characters are allowed,Whitespaces,Newline,Special characters
+            , . _ + - are optional</span>
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="City"></label>
+          <input type="text" placeholder="City" class="form-control" name="city" ng-model="city" pattern="[A-Za-z]{0,50}" title="At least One Uppercase one Lowercase is allowed,Maximum 50 characters are allowed"
+            required>
+          <span class="apperror" ng-show="form1.city.$touched && form1.city.$pristine && form1.city.$error.required">City can't be Empty</span>
+          <span class="apperror" ng-show="form1.city.$touched && form1.city.$dirty && form1.city.$error.pattern ">At least One Uppercase one Lowercase is allowed,Maximum 50 characters are allowed</span>
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="State"></label>
+          <input type="text" placeholder="State" class="form-control" name="state" ng-model="state" pattern="[A-Za-z]{0,50}" title="At least One Uppercase one Lowercase is allowed,Maximum 50 characters are allowed"
+            required>
+          <span class="apperror" ng-show="form1.state.$touched && form1.state.$pristine && form1.state.$error.required">City can't be Empty</span>
+          <span class="apperror" ng-show="form1.state.$touched && form1.state.$dirty && form1.state.$error.pattern ">[A-Za-z]{0,50}" title="At least One Uppercase one Lowercase is allowed,Maximum 50 characters are allowed</span>
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="Country"></label>
+          <input type="text" placeholder="Country" class="form-control" name="country" ng-model="country" pattern="[A-Za-z]{0,50}"
+            title="At least One Uppercase one Lowercase is allowed,Maximum 50 characters are allowed" required>
+          <span class="apperror" ng-show="form1.country.$touched && form1.country.$pristine && form1.country.$error.required">City can't be Empty</span>
+          <span class="apperror" ng-show="form1.country.$touched && form1.country.$dirty && form1.country.$error.pattern ">At least One Uppercase one Lowercase is allowed,Maximum 50 characters are allowed</span>
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="ZipCode"></label>
+          <input type="text" placeholder="ZipCode" class="form-control" name="zipcode" ng-model="zipcode" pattern="[0-9]{6}" title="6 Digits are required"
+            required>
+          <span class="apperror" ng-show="form1.zipcode.$touched && form1.zipcode.$pristine && form1.zipcode.$error.required">ZipCode can't be Empty</span>
+          <span class="apperror" ng-show="form1.zipcode.$touched && form1.zipcode.$dirty && form1.zipcode.$error.pattern ">6 Digits are required</span>
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="GoogleMapId"></label>
+          <input type="text" placeholder="Google Map Id/Link" class="form-control" name="maplink" ng-model="maplink">
+          <!-- <span class="apperror"  ng-show="form1.maplink.$touched && form1.maplink.$pristine && form1.maplink.$error.required">Google Map Id/Link can't be Empty</span>-->
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="Longitude">Longitude</label>
+          <input type="text" class="form-control" placeholder="Longitude" name="longitude" ng-model="longitude">
+          <!--<span class="apperror"  ng-show="form1.officeno.$touched && form1.officeno.$pristine && form1.officeno.$error.required">Office no can't be Empty</span>-->
+        </div>
+
+
+        <div class="form-group">
+          <label for="textinput" translate="Latitude">Latitude</label>
+          <input type="text" class="form-control" placeholder="Latitude" name="latitude" ng-model="latitude">
+          <!--<span class="apperror"  ng-show="form1.officeno.$touched && form1.officeno.$pristine && form1.officeno.$error.required">Office no can't be Empty</span>-->
+        </div>
+      </div>
+      <!-------------------------------------------- Contact Details---------------------------------------------------------------------------->
+      <div class="contact">
+        <h5>Contact Details</h5>
+        <div class="form-group">
+          <label for="textinput" translate="Phoneno">Phone no</label>
+          <!-- <input type="text" class="form-control" placeholder="Phone no" name="phoneno.number" ng-model="phoneno.number" required>-->
+
+          <div ng-repeat="phoneno in contacts ">
+            <input type="text" class="form-control" name="phoneno{{$index}}" ng-model="phoneno.number" ng-required="$first" pattern="[0-9]{10}"
+              title="Format: 9999999999" placeholder="9999999999">
+            <span class="apperror" ng-show="form1.phoneno{{$index}}.$touched && form1.phoneno{{$index}}.$pristine && form1.phoneno{{$index}}.$error.required">Phone no can't be Empty</span>
+            <span class="apperror" ng-show="form1.phoneno{{$index}}.$touched && form1.phoneno{{$index}}.$dirty &&  form1.phoneno{{$index}}.$error.pattern">Format: 9999999999</span>
+          </div>
+          <div>
+            <button type="button" ng-click="addContact()">add</button>
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+          <label for="textinput" translate="Officeno">Office no</label>
+          <input type="text" class="form-control" placeholder="Format: 9999999999" name="officeno" ng-model="officeno" pattern="[0-9]{10}"
+            title="Format: 9999999999" placeholder="Format: 9999999999">
+          <span class="apperror" ng-show="form1.officeno.$touched && form1.officeno.$pristine && form1.officeno.$error.required">Office no can't be Empty</span>
+          <span class="apperror" ng-show="form1.officeno.$touched && form1.officeno.$dirty &&  form1.officeno.$error.pattern">Format: 9999999999</span>
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="Emailid">Email id</label>
+          <input type="email" class="form-control" placeholder="Email id" name="emailid" ng-model="emailid" pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+"
+            title="At least one lowercase,one uppercase letter,one number is required,Special Characters -,_,.,+ are optional,only one @ is allowed,after @ one . and after . either one lowercase,one uppercase letter,one number or one special character is required, No whitespace is allowed"
+            required>
+          <span class="apperror" ng-show="form1.emailid.$touched &&  form1.emailid.$pristine && form1.emailid.$error.required">Userid can't be Empty</span>
+          <br>
+          <span class="apperror" ng-show="form1.emailid.$touched && form1.emailid.$dirty && form1.emailid.$error.pattern">At least one lowercase,one uppercase letter,one number is required,Special Characters -,_,.,+ are optional,only
+            one @ is allowed,after @ one . and after . either one lowercase,one uppercase letter,one number or one special
+            character is required, No whitespace is allowed</span>
+        </div>
+
+        <div class="form-group">
+          <label for="textinput" translate="Fax">Fax</label>
+          <input type="text" class="form-control" placeholder="Format:+176-657-3456268" name="fax" ng-model="fax" pattern="[+]?\d{7}"
+            title="7 digits are required and + is optional in the biginning">
+          <span class="apperror" ng-show="form1.fax.$touched &&  form1.fax.$pristine && form1.fax.$error.required">Fax can't be Empty</span>
+          <br>
+          <span class="apperror" ng-show="form1.fax.$touched && form1.fax.$dirty && form1.fax.$error.pattern">7 digits are required and + is optional in the biginning</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="pull-right">
+            <button type="reset" class="btn btn-default" translate="Reset"></button>
+            <button type="submit" class="btn btn-primary" translate="Next"></button>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
