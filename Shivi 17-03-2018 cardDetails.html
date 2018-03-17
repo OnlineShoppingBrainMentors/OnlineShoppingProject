@@ -1,0 +1,174 @@
+<div class="container">
+  <form name="form1" method="post" ng-submit="validate(form1)">
+    <fieldset>
+      <h4 translate="CardDetails">Card Details</h4>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="CardNo"></label>
+        <input type="text" placeholder="Account No" class="form-control" name="cardno" ng-model="object.cardno" pattern="^[0-9]{11,50}$"
+          required>
+        <span class="apperror" ng-show="form1.cardno.$touched && form1.cardno.$pristine && form1.cardno.$error.required">Card no can't be Empty</span>
+        <span class="apperror" ng-show="form1.cardno.$touched && form1.cardno.$dirty && form1.cardno.$error.pattern">Invalid Card no</span>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="CardHolderName"></label>
+        <input type="text" placeholder="Card Holder Name" class="form-control" name="cardholdername" ng-model="object.cardholdername"
+          pattern="[A-Z]{1,50}([A-Z] ?)+" title="At least one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional"
+          required>
+        <span class="apperror" ng-show="form1.cardholdername.$touched && form1.cardholdername.$pristine && form1.cardholdername.$error.required">Card Holder Name can't be Empty</span>
+        <span class="apperror" ng-show="form1.cardholdername.$touched && form1.cardholdername.$dirty && form1.cardholdername.$error.pattern">Invalid Card Holder Name</span>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="textinput" translate="CVV"> </label>
+        <input type="text" placeholder="CVV" class="form-control" name="cvv" ng-model="object.cvv" pattern="[0-9]{3}" title="Only Numbers are allowed,3 digit number is required"
+          required>
+        <span class="apperror" ng-show="form1.cvv.$touched && form1.cvv.$pristine && form1.cvv.$error.required">CVV can't be Empty</span>
+        <span class="apperror" ng-show="form1.cvv.$touched && form1.cvv.$dirty && form1.cvv.$error.pattern">Invalid CVV</span>
+      </div>
+
+      <div class="form-group">
+        <label for="textinput" translate="CardType"></label>
+        <select class="custom-select form-control" name="cardtype" ng-model="object.cardtype" required>
+          <option value="Credit Card" selected>CREDIT CARD</option>
+          <option value="Debit Card">DEBIT CARD</option>
+        </select>
+        <span class="apperror" ng-show="form1.cardtype.$touched && form1.cardtype.$pristine && form1.cardtype.$error.required">Card Type can't be Empty</span>
+      </div>
+
+      <div class="form-group">
+        <label for="textinput" translate="ExpiryDate"></label>
+        <input type="date" placeholder="Expiry Date" class="form-control" name="expirydate" ng-model="object.expirydate" pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))'
+          title="the year is numeric and starts with 19 or 20,the month is numeric and between 01-12, and the day is numeric between 01-29, or 30 if the month value is anything other than 02, or 31 if the month value is one of 01,03,05,07,08,10, or 12."
+          required>
+        <span class="apperror" ng-show="form1.expirydate.$touched && form1.expirydate.$pristine && form1.expirydate.$error.required">Expiry Date can't be Empty</span>
+        <span class="apperror" ng-show="form1.expirydate.$touched && form1.expirydate.$dirty && form1.expirydate.$error.pattern">Invalid Expiry Date</span>
+      </div>
+
+
+      <div class="form-group">
+        <label for="textinput" translate="CardProvider"></label>
+        <select class="custom-select form-control" name="cardprovider" ng-model="object.cardprovider" required>
+          <option value="Visa" selected>Visa</option>
+          <option value="Rupay">Rupay</option>
+          <option value="Maestro">Maestro</option>
+          <option value="American Express">American Express</option>
+        </select>
+        <span class="apperror" ng-show="form1.cardprovider.$touched && form1.cardprovider.$pristine && form1.cardprovider.$error.required">Card Provider can't be Empty</span>
+      </div>
+
+
+      <div class="form-group">
+        <label for="textinput" translate="Bank"></label>
+        <input type="text" placeholder="Bank" class="form-control" name="bank" ng-model="object.bank" pattern="[A-Z]{1,50}([A-Z] ?)+"
+          title="At least one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional"
+          required>
+        <span class="apperror" ng-show="form1.bank.$touched && form1.bank.$pristine && form1.bank.$error.required">Bank Name can't be Empty</span>
+        <span class="apperror" ng-show="form1.bank.$touched && form1.bank.$dirty && form1.bank.$error.pattern">Invalid Bank Name</span>
+      </div>
+
+      <div class="form-group">
+        <label for="textinput" translate="Branch"></label>
+        <input type="text" placeholder="Branch" class="form-control" name="branch" ng-model="object.branch" pattern="[A-Z]{1,50}([A-Z] ?)+"
+          title="At least one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional"
+          required>
+        <span class="apperror" ng-show="form1.branch.$touched && form1.branch.$pristine && form1.branch.$error.required">Branch can't be Empty</span>
+        <span class="apperror" ng-show="form1.branch.$touched && form1.branch.$dirty && form1.branch.$error.pattern">Invalid Branch</span>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="pull-right">
+            <button type="reset" class="btn btn-default" translate="Reset">Reset</button>
+            <button type="submit" class="btn btn-primary" translate="Next">Next</button>
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+
+
+
+
+<!-- <div class="container">
+    <form  name="form1"  method="post" novalidate  ng-submit="validate(form1)">   
+        <fieldset>
+          <h4 translate="CardDetails">Card Details</h4>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="CardNo"></label>
+              <input type="text" placeholder="Account No" class="form-control"  name="cardno" ng-model="object.cardno" pattern="^[0-9]{11,50}$" required>
+              <span class="apperror"  ng-show="form1.cardno.$touched && form1.cardno.$pristine && form1.cardno.$error.required">Card no can't be Empty</span>
+              <span class="apperror"  ng-show="form1.cardno.$touched && form1.cardno.$dirty && form1.cardno.$error.pattern">Invalid Card no</span>
+            </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="CardHolderName"></label>
+              <input type="text" placeholder="Card Holder Name" class="form-control" name="cardholdername" ng-model="object.cardholdername" pattern="[A-Z]{1,50}([A-Z] ?)+" title="At least one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional" required>
+              <span class="apperror"  ng-show="form1.cardholdername.$touched && form1.cardholdername.$pristine && form1.cardholdername.$error.required">Card Holder Name can't be Empty</span>
+              <span class="apperror"  ng-show="form1.cardholdername.$touched && form1.cardholdername.$dirty && form1.cardholdername.$error.pattern">Invalid Card Holder Name</span>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" translate="CVV"> </label>
+              <input type="text" placeholder="CVV" class="form-control" name="cvv" ng-model="object.cvv" pattern="[0-9]{3}" title="Only Numbers are allowed,3 digit number is required" required>
+              <span class="apperror"  ng-show="form1.cvv.$touched && form1.cvv.$pristine && form1.cvv.$error.required">CVV can't be Empty</span>
+              <span class="apperror"  ng-show="form1.cvv.$touched && form1.cvv.$dirty && form1.cvv.$error.pattern">Invalid CVV</span>
+          </div>
+ 
+           <div class="form-group">
+            <label for="textinput" translate="CardType"></label>
+            <select class="custom-select form-control" name="cardtype" ng-model="object.cardtype" required>
+                <option value="Credit Card" selected>CREDIT CARD</option>
+              <option value="Debit Card" >DEBIT CARD</option></select>
+          <span class="apperror"  ng-show="form1.cardtype.$touched && form1.cardtype.$pristine && form1.cardtype.$error.required">Card Type can't be Empty</span>
+          </div>
+
+          <div class="form-group">
+            <label for="textinput" translate="ExpiryDate"></label>
+              <input type="date" placeholder="Expiry Date" class="form-control" name="expirydate" ng-model="object.expirydate" pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title="the year is numeric and starts with 19 or 20,the month is numeric and between 01-12, and the day is numeric between 01-29, or 30 if the month value is anything other than 02, or 31 if the month value is one of 01,03,05,07,08,10, or 12." required>
+              <span class="apperror"  ng-show="form1.expirydate.$touched && form1.expirydate.$pristine && form1.expirydate.$error.required">Expiry Date can't be Empty</span>
+              <span class="apperror"  ng-show="form1.expirydate.$touched && form1.expirydate.$dirty && form1.expirydate.$error.pattern">Invalid Expiry Date</span>
+          </div>
+
+
+         <div class="form-group">
+                <label for="textinput" translate="CardProvider"></label>
+                  <select class="custom-select form-control" name="cardprovider" ng-model="object.cardprovider" required>
+                      <option value="Visa" selected>Visa</option>
+                      <option value="Rupay">Rupay</option>
+                      <option value="Maestro">Maestro</option>
+                      <option value="American Express">American Express</option></select>
+                  <span class="apperror"  ng-show="form1.cardprovider.$touched && form1.cardprovider.$pristine && form1.cardprovider.$error.required">Card Provider can't be Empty</span>
+              </div>
+
+
+          <div class="form-group">
+                <label for="textinput" translate="Bank"></label>
+                  <input type="text" placeholder="Bank" class="form-control" name="bank" ng-model="object.bank"pattern="[A-Z]{1,50}([A-Z] ?)+" title="At least one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional" required>
+                  <span class="apperror"  ng-show="form1.bank.$touched && form1.bank.$pristine && form1.bank.$error.required">Bank Name can't be Empty</span>
+                  <span class="apperror"  ng-show="form1.bank.$touched && form1.bank.$dirty && form1.bank.$error.pattern">Invalid Bank Name</span>
+              </div>
+
+          <div class="form-group">
+                <label for="textinput" translate="Branch"></label>
+                  <input type="text" placeholder="Branch" class="form-control" name="branch" ng-model="object.branch" pattern="[A-Z]{1,50}([A-Z] ?)+" title="At least one uppercase letter,maximum 50 characters are required,no number is allowed,whitespace is optional" required>
+                  <span class="apperror"  ng-show="form1.branch.$touched && form1.branch.$pristine && form1.branch.$error.required">Branch can't be Empty</span>
+                  <span class="apperror"  ng-show="form1.branch.$touched && form1.branch.$dirty && form1.branch.$error.pattern">Invalid Branch</span>
+              </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="reset" class="btn btn-default"  translate="Reset">Reset</button>
+                <button type="submit" class="btn btn-primary"   translate="Next">Next</button>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+    </div> -->
