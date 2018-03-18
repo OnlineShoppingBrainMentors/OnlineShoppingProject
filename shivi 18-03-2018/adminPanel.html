@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="admin-panel">
+        <div class="container-fluid">
+            <div class="col-md-2">
+                <div class="filter-control">
+                    <div class="sort-by-control">
+                        <div class="panel-group" id="accordian">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" class="accordian-toggle" data-parent="#accordian" data-target="#collapseOne">Sort By : </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-group" id="accordian">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" class="accordian-toggle" data-parent="#accordian" data-target="#collapseTwo">Filter By : </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-group" id="accordian">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" class="accordian-toggle" data-parent="#accordian" data-target="#collapseThree">Sort By : </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="panel-control">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#home">Product</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu1">Categories</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu2">Orders</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu3">Personal Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu4">Company Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu5">Account Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu6">Banking Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu7">Manage Users</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <div class="admin-product-control">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <select name="" id="" class="form-control">
+                                            <option value="" disabled selected hidden>--Choose Category--</option>
+                                            <option value="">Category 1</option>
+                                            <option value="">Category 2</option>
+                                            <option value="">Category 3</option>
+                                            <option value="">Category 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select name="" id="" class="form-control">
+                                            <option value="" disabled selected hidden>--Choose Sub-Category--</option>
+                                            <option value="">Category 1</option>
+                                            <option value="">Category 2</option>
+                                            <option value="">Category 3</option>
+                                            <option value="">Category 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select name="" id="" class="form-control">
+                                            <option value="" disabled selected hidden>--Choose Set--</option>
+                                            <option value="">Category 1</option>
+                                            <option value="">Category 2</option>
+                                            <option value="">Category 3</option>
+                                            <option value="">Category 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="product-control-buttons">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <button class="btn-default btn-block btn">Add New Product</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn-default btn-block btn">View Product Details</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn-default btn-block btn">Edit Product</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn-default btn-block btn">Delete Product</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="admin-product-list">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="admin-product-image">
+                                                <img src="proj5.jpg" class="img-responsive" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="admin-product-image">
+                                                <img src="proj5.jpg" class="img-responsive" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="admin-product-image">
+                                                <img src="proj5.jpg" class="img-responsive" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="nav">
+                                                <li>Field 1 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span>Value</span>
+                                                </li>
+                                                <li>Field 5 :
+                                                    <span>Value</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <div class="admin-category-control">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <tr>
+                                                    <td class="w-25 f-weight">Category 1
+                                                        <span>
+                                                            <a href="#">View Products</a>
+                                                        </span>
+                                                    </td>
+                                                    <td class="w-50">Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Minima asperiores quas nostrum sunt, voluptatem consectetur accusantium
+                                                        inventore dolores libero totam iste! Quia officiis exercitationem
+                                                        obcaecati, odit deleniti accusamus eveniet ab!</td>
+                                                    <td>
+                                                        <div class="table-responsive">
+                                                            <table class="table margin-btm bg-trans">
+                                                                <tr>
+                                                                    <td>Subcategory 1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 3</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 4</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 5</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="w-25 f-weight">Category 1
+                                                        <span>
+                                                            <a href="#">View Products</a>
+                                                        </span>
+                                                    </td>
+                                                    <td class="w-50">Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Minima asperiores quas nostrum sunt, voluptatem consectetur accusantium
+                                                        inventore dolores libero totam iste! Quia officiis exercitationem
+                                                        obcaecati, odit deleniti accusamus eveniet ab!</td>
+                                                    <td>
+                                                        <div class="table-responsive">
+                                                            <table class="table margin-btm bg-trans">
+                                                                <tr>
+                                                                    <td>Subcategory 1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 3</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 4</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 5</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="w-25 f-weight">Category 1
+                                                        <span>
+                                                            <a href="#">View Products</a>
+                                                        </span>
+                                                    </td>
+                                                    <td class="w-50">Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Minima asperiores quas nostrum sunt, voluptatem consectetur accusantium
+                                                        inventore dolores libero totam iste! Quia officiis exercitationem
+                                                        obcaecati, odit deleniti accusamus eveniet ab!</td>
+                                                    <td>
+                                                        <div class="table-responsive">
+                                                            <table class="table margin-btm bg-trans">
+                                                                <tr>
+                                                                    <td>Subcategory 1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 3</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 4</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Subcategory 5</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="admin-category-button">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <button class="btn btn-default btn-block">Add New Category</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-default btn-block">View Details</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-default btn-block">Edit Selected Category</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-default btn-block">Delete Selected Category</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                                totam rem aperiam.</p>
+                        </div>
+                        <div id="menu3" class="tab-pane fade">
+                            <div class="personal-details">
+                                <h4 translate="Personal Details">Personal Details</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="" translate="Email id">Email id</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="" translate="Phoneno">Phone no.</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="" translate="DOB">DOB</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="menu4" class="tab-pane fade">
+                            <div class="company-details">
+                                <h4>Comapany Details</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textinput" translate="NameOfCompany">Name Of Company</label>
+                                            <input type="text" placeholder="Name Of Company" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textinput" translate="Description">Description</label>
+                                            <textarea rows="4" cols="50" placeholder="Description" class="form-control"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textinput" translate="Tagline">Tagline</label>
+                                            <textarea rows="4" cols="50" placeholder="Tagline" class="form-control"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="textinput" translate="CompanyLogo">Company Logo</label>
+                                            <input type="text" placeholder="Company Logo" class="form-control">
+                                            <a href="" translate="UploadPhoto">Upload Photo</a>
+                                        </div>
+                                        <div class="branch">
+                                            <h4 translate="AddressOfCompany">Address Of Company </h4>
+                                            <!-- Text input -->
+                                            <div class="form-group">
+                                                <label for="textinput" translate="StreetAddress">Street Address</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="textinput" translate="City">City</label>
+                                                <input type="text" placeholder="City" class="form-control" name="city" ng-model="city">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="textinput" translate="State">State</label>
+                                                <input type="text" placeholder="State" class="form-control" name="state" ng-model="state">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="textinput" translate="Country">Country</label>
+                                                <input type="text" placeholder="Country" class="form-control" name="country" ng-model="country">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="textinput" translate="ZipCode">Zipcode</label>
+                                                <input type="text" placeholder="ZipCode" class="form-control" name="zipcode" ng-model="zipcode">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu5" class="tab-pane fade">
+                            <div class="account-details">
+                                <h4 translate="AccountDetails">Account Details</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textinput" translate="CardNo">Card No</label>
+                                            <input type="text" placeholder="Account No" class="form-control" name="cardno">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="textinput" translate="CardHolderName">Card Holder Name</label>
+                                            <input type="text" placeholder="Card Holder Name" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="textinput" translate="CardType">Card Type</label>
+                                            <select class="custom-select form-control" name="cardtype">
+                                                <option value="Credit Card" selected>CREDIT CARD</option>
+                                                <option value="Debit Card">DEBIT CARD</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="textinput" translate="ExpiryDate">Expiry Date</label>
+                                            <input type="date" placeholder="Expiry Date" class="form-control" name="expirydate">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="textinput" translate="CardProvider">Card Provider</label>
+                                            <select class="custom-select form-control" name="cardprovider">
+                                                <option value="Visa" selected>Visa</option>
+                                                <option value="Rupay">Rupay</option>
+                                                <option value="Maestro">Maestro</option>
+                                                <option value="American Express">American Express</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="textinput" translate="Bank">Bank</label>
+                                            <input type="text" placeholder="Bank" class="form-control" name="bank">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="textinput" translate="Branch">Branch</label>
+                                            <input type="text" placeholder="Branch" class="form-control" name="branch">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu6" class="tab-pane fade">
+                            <h3>Menu 5</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                        <div id="menu7" class="tab-pane fade">
+                            <h3>Menu 6</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
