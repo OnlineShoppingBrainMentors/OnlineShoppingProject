@@ -1,0 +1,151 @@
+.w-15 {
+    width: 15% !important;
+}
+
+.w-25 {
+    width: 25% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.w-75 {
+    width: 75% !important;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.m {
+    margin: 0 auto;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.pr {
+    padding-right: 0px !important;
+}
+
+.pr input {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-right: none;
+}
+
+.pl {
+    padding-left: 0px !important;
+}
+
+.pl button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
+}
+
+.dnone {
+    display: none;
+}
+
+.f-weight {
+    font-weight: bold;
+}
+
+.bg-trans {
+    background-color: transparent !important;
+}
+
+.margin-btm {
+    margin-bottom: 0px;
+}
+
+.border-btm {
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-panel .filter-control .panel-body {
+    padding: 0px;
+}
+
+.admin-panel .filter-control .panel-body .list-group-item {
+    border-radius: 0px;
+    border: 0px;
+}
+
+.admin-panel .admin-product-control {
+    margin-top: 20px;
+}
+
+.admin-panel .admin-product-control select {
+    width: 70%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.admin-panel .product-control-buttons {
+    margin-top: 40px;
+}
+
+.admin-panel .product-control-buttons .btn {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.admin-panel .admin-product-list {
+    margin-top: 40px;
+}
+
+.admin-panel .admin-product-list .nav li {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 4px 0;
+}
+
+.admin-panel .additem {
+    background: white;
+    box-shadow: 0px 0px 10px #ddd;
+    padding: 0 10px;
+}
+
+.admin-panel .viewdetails .nav li {
+    padding: 5px 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.admin-panel .viewdetails .nav li span {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.admin-panel .admin-product-list .nav li span {
+    font-weight: normal;
+}
+
+.admin-panel .admin-product-list .row {
+    border-bottom: 1px solid #ddd;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+.admin-panel .admin-category-control {
+    margin-top: 40px;
+}
+
+.admin-panel .admin-category-control .table tr td,
+.table tr th {
+    border: 0px !important;
+}

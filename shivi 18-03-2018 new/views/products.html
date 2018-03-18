@@ -1,0 +1,354 @@
+<div class="admin-product-control">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" ng-model="selectedCategory" ng-change="addSubcategories()">
+                <option value="" disabled selected hidden>Choose Category</option>
+                <option ng-repeat="categoryname in categories" value="{{categoryname.category}}" ng-bind="categoryname.category"></option>
+
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control" ng-model="selectedSubCategory" ng-change="addSubcategories()">
+                <option value="" disabled selected hidden>Choose Sub-Category</option>
+                <option ng-repeat="categoryname in subCategories" value="{{categoryname.subcategory}}" ng-bind="categoryname.subcategory"></option>
+            </select>
+        </div>
+        <!-- <div class="col-md-3">
+            <select name="" id="" class="form-control" ng-model="selectedSubset">
+                <option value="" disabled selected hidden>Choose Set</option>
+                <option value="">Samsung</option>
+                <option value="">Category 10</option>
+                <option value="">Category 11</option>
+                <option value="">Category 12</option>
+            </select>
+        </div> -->
+        <div class="col-md-4">
+            <button type="button" class="btn btn-default btn-block w-70" data-toggle="modal" data-target="#addproductmodal">Add New Product</button>
+        </div>
+    </div>
+
+    <div class="admin-product-list">
+        <div class="row" ng-repeat="product in productList">
+            <div class="col-md-2">
+                <div class="admin-product-image">
+                    <img ng-src="{{product.img}}" class="img-responsive" alt="">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <ul class="nav">
+                    <li>ID :
+                        <span ng-bind="product.id"></span>
+                    </li>
+                    <li>Field 1 :
+                        <span ng-bind="product.f1"></span>
+                    </li>
+                    <li>Field 2 :
+                        <span ng-bind="product.f2"></span>
+                    </li>
+                    <li>Field 3 :
+                        <span ng-bind="product.f3"></span>
+                    </li>
+                    <li>Field 4 :
+                        <span ng-bind="product.f4"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <ul class="nav">
+                    <li>Field 5 :
+                        <span ng-bind="product.f5"></span>
+                    </li>
+                    <li>Field 6 :
+                        <span ng-bind="product.f6"></span>
+                    </li>
+                    <li>Field 7 :
+                        <span ng-bind="product.f7"></span>
+                    </li>
+                    <li>Field 8 :
+                        <span ng-bind="product.f8"></span>
+                    </li>
+                    <li>Field 9 :
+                        <span ng-bind="product.f9"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <ul class="nav">
+                    <li>Field 10 :
+                        <span ng-bind="product.f10"></span>
+                    </li>
+                    <li>Field 11 :
+                        <span ng-bind="product.f11"></span>
+                    </li>
+                    <li>Field 12 :
+                        <span ng-bind="product.f12"></span>
+                    </li>
+                    <li>Field 13 :
+                        <span ng-bind="product.f13"></span>
+                    </li>
+                    <li>Field 14 :
+                        <span ng-bind="product.f14"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <button class="btn-default btn-block btn" data-target="#viewdetails" data-toggle="modal" ng-click="viewDetails(product.id)">View Product Details</button>
+                <button class="btn-default btn-block btn" data-target="#editproductmodal" data-toggle="modal" ng-click="edit(product.id)">Edit Product</button>
+                <button class="btn-default btn-block btn" ng-click="delete(product.id)">Delete Product</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="additem">
+        <div class="modal fade" id="addproductmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+                    </div>
+                    <div class="modal-body addprod">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group" ng-repeat="key in category.fields">
+                                        <label for="" class="col-sm-3 control-label" ng-bind="key.field"></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="str[$index]">
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group" ng-repeat="key in subCategoriesKey.sets">
+                                        <label for="" class="col-sm-3 control-label" ng-bind="key.field"></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="add()">Add Product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="edititem">
+        <div class="modal fade" id="editproductmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Edit Product</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">ID :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="eid" readonly disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Image Url :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="eimgurl">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 1 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 2 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 3 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 4 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef4">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 5 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef5">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 6 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef6">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 7 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef7">
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 8 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef8">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 9 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef9">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 10 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef10">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 11 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef11">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 12 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef12">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 13 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef13">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 14 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef14">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveEdit()">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="viewdetails">
+        <div class="modal fade" id="viewdetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Product Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="prd-image">
+                                    <img ng-src="{{vimgurl}}" class="img-responsive" ng-model="vimgurl" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <ul class="nav">
+                                    <li>Id :
+                                        <span ng-model="vid" ng-bind="vid"></span>
+                                    </li>
+                                    <li>Field 1 :
+                                        <span ng-model="vf1" ng-bind="vf1"></span>
+                                    </li>
+                                    <li>Field 2 :
+                                        <span ng-model="vf2" ng-bind="vf2"></span>
+                                    </li>
+                                    <li>Field 3 :
+                                        <span ng-model="vf3" ng-bind="vf3"></span>
+                                    </li>
+                                    <li>Field 4 :
+                                        <span ng-model="vf4" ng-bind="vf4"></span>
+                                    </li>
+                                    <li>Field 5 :
+                                        <span ng-model="vf5" ng-bind="vf5"></span>
+                                    </li>
+                                    <li>Field 6 :
+                                        <span ng-model="vf6" ng-bind="vf6"></span>
+                                    </li>
+                                    <li>Field 7 :
+                                        <span ng-model="vf7" ng-bind="vf7"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5">
+                                <ul class="nav">
+                                    <li>Field 8 :
+                                        <span ng-model="vf8" ng-bind="vf8"></span>
+                                    </li>
+                                    <li>Field 9 :
+                                        <span ng-model="vf9" ng-bind="vf9"></span>
+                                    </li>
+                                    <li>Field 10 :
+                                        <span ng-model="vf10" ng-bind="vf10"></span>
+                                    </li>
+                                    <li>Field 11 :
+                                        <span ng-model="vf11" ng-bind="vf11"></span>
+                                    </li>
+                                    <li>Field 12 :
+                                        <span ng-model="vf12" ng-bind="vf12"></span>
+                                    </li>
+                                    <li>Field 13 :
+                                        <span ng-model="vf13" ng-bind="vf13"></span>
+                                    </li>
+                                    <li>Field 14 :
+                                        <span ng-model="vf14" ng-bind="vf14"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
